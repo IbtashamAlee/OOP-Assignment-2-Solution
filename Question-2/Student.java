@@ -1,11 +1,10 @@
+package com.company;
+
 public class Student {
     private String name, id;
     private double gpa;
 
     public Student() {
-        name = "Null";
-        id = "Null";
-        gpa = 0.0;
     }
 
     public Student(String name, String id, double gpa) {
@@ -40,8 +39,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student Details" +
-                "\nName =" + name + "\nID =" + id +
-                "\nGPA =" + gpa + "\n";
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", gpa=" + gpa +
+                '}';
     }
 }
