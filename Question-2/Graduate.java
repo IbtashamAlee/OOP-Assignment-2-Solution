@@ -1,13 +1,11 @@
+package com.company;
+
 public class Graduate extends Student {
     private String thesisTitle;
 
     public Graduate() {
         super();
-        thesisTitle = "Null";
-    }
 
-    public Graduate(String thesisTitle) {
-        this.thesisTitle = thesisTitle;
     }
 
     public Graduate(String thesisTitle, String name, String id, double gpa) {
@@ -25,8 +23,9 @@ public class Graduate extends Student {
 
     @Override
     public String toString() {
-        return "Detail of Graduate Students \n" +
-                "Title :" + thesisTitle + "\nName =" + super.getName() + "\nID =" + super.getId() +
+        return "Graduate{" +
+                "thesisTitle='" + thesisTitle + '\'' +
+                '}'+"\nName =" + super.getName() + "\nID =" + super.getId() +
                 "\nGPA =" + super.getGpa() + "\n";
     }
 }
