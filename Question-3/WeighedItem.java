@@ -1,5 +1,3 @@
-package com.company;
-
 public class WeighedItem extends PurchaseItem {
     private double weight;
 
