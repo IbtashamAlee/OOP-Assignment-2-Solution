@@ -1,9 +1,10 @@
+package com.company;
+
 public class WeighedItem extends PurchaseItem {
     private double weight;
 
     public WeighedItem() {
-        super();
-        this.weight = 0.0;
+
     }
 
     public WeighedItem(double weight) {
@@ -26,6 +27,6 @@ public class WeighedItem extends PurchaseItem {
 
     @Override
     public String toString() {
-        return super.getName() + " @  " + super.getPrice() + "    " + weight + "    " + getPrice() + " (In case of Weighed Item)";
+        return super.getName() + " @  " + super.getPrice() + "    " + weight + "    " + getPrice() ;
     }
 }
