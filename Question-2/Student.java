@@ -1,48 +1,32 @@
 package com.company;
 
-public class Student {
-    private String name, id;
-    private double gpa;
+public class UnderGraduate extends Student {
+    private int year;
 
-    public Student() {
+    public UnderGraduate() {
+        super();
+        year = 0;
     }
 
-    public Student(String name, String id, double gpa) {
-        this.name = name;
-        this.id = id;
-        this.gpa = gpa;
+    public UnderGraduate(int year, String name, String id, double gpa) {
+        super(name, id, gpa);
+        this.year = year;
     }
 
-    public String getName() {
-        return name;
+    public int getYear() {
+        return year;
     }
 
-    public String getId() {
-        return id;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public double getGpa() {
-        return gpa;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
-    }
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", id='" + id + '\'' +
-                ", gpa=" + gpa +
-                '}';
+        return "UnderGraduate{" +
+                "year=" + year +
+                '}'+"\nName =" + super.getName() + "\nID =" + super.getId() +
+                "\nGPA =" + super.getGpa() + "\n";
     }
 }
