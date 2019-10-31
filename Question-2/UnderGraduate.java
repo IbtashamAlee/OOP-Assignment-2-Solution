@@ -1,17 +1,11 @@
-
+package com.company;
 
 public class UnderGraduate extends Student {
     private int year;
 
     public UnderGraduate() {
+        super();
         year = 0;
-        super.setName("Null");
-        super.setId("Null");
-        super.setGpa(0.0);
-    }
-
-    public UnderGraduate(int year) {
-        this.year = year;
     }
 
     public UnderGraduate(int year, String name, String id, double gpa) {
@@ -27,10 +21,12 @@ public class UnderGraduate extends Student {
         this.year = year;
     }
 
+
     @Override
     public String toString() {
-        return "Detail of UnderGraduate Student \n" +
-                "Year :" + year + "\nName =" + super.getName() + "\nID =" + super.getId() +
+        return "UnderGraduate{" +
+                "year=" + year +
+                '}'+"\nName =" + super.getName() + "\nID =" + super.getId() +
                 "\nGPA =" + super.getGpa() + "\n";
     }
 }
