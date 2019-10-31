@@ -1,4 +1,4 @@
-package com.company;
+
 
 public class UnderGraduate extends Student {
     private int year;
