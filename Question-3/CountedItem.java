@@ -1,3 +1,5 @@
+package com.company;
+
 public class CountedItem extends PurchaseItem {
     private int quantity;
 
@@ -24,6 +26,6 @@ public class CountedItem extends PurchaseItem {
 
     @Override
     public String toString() {
-        return super.getName() + " @  " + super.getPrice() + "    " + quantity + "    " + getPrice() + " (In case of Counted Item)";
+        return super.getName() + " @  " + super.getPrice() + "    " + quantity + "    " + getPrice();
     }
 }
