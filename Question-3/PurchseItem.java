@@ -1,10 +1,11 @@
+package com.company;
+
 public class PurchaseItem {
     private String name;
     private double unitPrice;
 
     public PurchaseItem() {
-        this.name = "No item";
-        this.unitPrice = 0.0;
+
     }
 
     public PurchaseItem(String name, double unitPrice) {
@@ -30,6 +31,10 @@ public class PurchaseItem {
 
     @Override
     public String toString() {
-        return (name + "@" + unitPrice + "\n");
+        return "PurchaseItem{" +
+                "name='" + name + '\'' +
+                ", unitPrice=" + unitPrice +
+                '}';
     }
 }
+
