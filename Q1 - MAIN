@@ -1,0 +1,57 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Odometer od1 = new Odometer();
+        double milage = 0d, fuel = 0d , efficiency = 0d ;
+        while(true) {
+            System.out.printf("\n\n PRESS \n 1 to add trip \n 2 to add miles \n 3 to reset \n 4 to show consumed fuel");
+            System.out.println("\n 5 to set efficency \n 6 to exit");
+            Scanner s = new Scanner(System.in);
+            char opt   = s.next().charAt(0);
+            switch(opt){
+                case'1':
+                    System.out.println("Enter distance of your trip(in miles)");
+                    milage= s.nextDouble();
+                    od1.milage += milage;
+                    milage = 0;
+                    System.out.println("Enter fuel consumed for your trip(in gallons)");
+                    fuel = s.nextDouble();
+                    od1.fuel += fuel ;
+                    fuel = 0;
+                    od1.efficiency = od1.milage / od1.fuel;
+                    System.out.println("your avg fuel efficiency  is " + od1.efficiency +" miles per gallon1");
+                    break;
+
+                case'2':
+                    System.out.println("Enter the miles to add");
+                  milage = s.nextDouble();
+//                    od1.milage += milage;
+//                    milage = 0;
+                    od1.addMilage(milage);
+                    break;
+
+                case'3':
+                    od1.reset();
+                    System.out.println("odometer reseted to 0 ");
+                    break;
+
+                case'4':
+                    System.out.println("your total consumed fuel is " +od1.getFuel());
+                    break;
+
+                case'5':
+                    System.out.println("Enter effieciency ");
+                    efficiency = s.nextDouble();
+                    od1.setEfficiency(efficiency);
+                    break;
+
+                case'6':
+                    return ;
+                default:
+                    System.out.println("invalid input ");
+
+            }
+        }
+
+
+        }
